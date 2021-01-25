@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/f8dcd23edf.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="left-panel">
+        <div class="nav">
+          <div class="row-1">
+            <ul>
+              <li><i class="fas fa-book"></i></li>
+              <li><i class="fas fa-map"></i></li>
+              <li><i class="fas fa-cog"></i></li>
+              <li><i class="fas fa-filter"></i></li>
+            </ul>
+          </div>
+          <div class="row-2">
+            <ul>
+              <li><i class="fas fa-map-marker-alt active"></i></li>
+              <li><i class="fas fa-male"></i></li>
+              <li><i class="fas fa-folder"></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="profile">
+          <img
+            src="https://images.unsplash.com/photo-1520271348391-049dd132bb7c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80"
+            alt="avatar"
+          />
+        </div>
+      </section>
+      <aside>
+        <section class="middle-panel">
+          <div class="header">
+            <div class="left-side">
+              <i class="text-grey fas fa-angle-left"></i>
+              <h1>
+                <div class="text-grey">Global</div>
+                <div class="text-dark">Temperature</div>
+              </h1>
+            </div>
+            <div class="right-side">
+              <div class="top">
+                <i class="text-grey fas fa-ellipsis-h"></i>
+              </div>
+              <div class="bottom">
+                <div class="row">
+                  <i class="fas fa-fire-alt text-purple"></i>
+                  <p class="text-dark">53%</p>
+                </div>
+                <div class="row">
+                  <i class="fas fa-cloud-sun-rain text-yellow"></i>
+                  <p class="text-dark">10Mm</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="middle">
+            <div class="icon">
+              <i class="fas fa-minus"></i>
+            </div>
+            <div class="temperature">
+              <div class="main-circle">
+                <div class="shadow-circle">
+                  <div class="inner-circle">
+                    30 <sup><sup>o</sup>C</sup>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="icon">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+          <div class="bottom">
+            <h1 class="text-grey">Last Days</h1>
+            <div class="calendar">
+              <div class="month" value="30">30</div>
+              <div class="month" value="50">50</div>
+              <div class="month" value="40">40</div>
+              <div class="month orange" value="90">90</div>
+              <div class="month" value="70">70</div>
+              <div class="month" value="40">40</div>
+              <div class="month purple" value="120">100</div>
+              <div class="month" value="50">50</div>
+              <div class="month" value="85">85</div>
+              <div class="month" value="92">92</div>
+              <div class="month" value="70">70</div>
+              <div class="month" value="60">60</div>
+            </div>
+          </div>
+        </section>
+        <section class="right-panel">
+          <div class="shortcuts">
+            <h1 class="text-grey">
+              Shortcuts &nbsp;&nbsp;<i class="fas fa-chevron-down"></i>
+            </h1>
+            <div class="content">
+              <div class="row">
+                <div class="icon purple">
+                  <i class="fas fa-thermometer-full"></i>
+                </div>
+                <div class="text">
+                  <h1>Temperature</h1>
+                  <p>
+                    24 <sup><sup>o</sup>C</sup>
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="icon orange">
+                  <i class="fas fa-wifi"></i>
+                </div>
+                <div class="text">
+                  <h1>Internet</h1>
+                  <p>78.5</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="icon yellow">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="text">
+                  <h1>Lights</h1>
+                  <p>9+</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="devices">
+            <h1 class="text-grey">
+              Devices &nbsp;&nbsp;<i class="fas fa-chevron-down"></i>
+            </h1>
+            <div class="contents">
+              <div class="icon purple">
+                <i class="fas fa-plug"></i>
+              </div>
+              <div class="icon yellow">
+                <i class="fas fa-broadcast-tower"></i>
+              </div>
+              <div class="add icon">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

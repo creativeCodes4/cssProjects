@@ -1,0 +1,404 @@
+// Variable Declaration...
+$white-color: #ffffff;
+$grey-color: #a4a4a6;
+$light-color: #f6f5fb;
+$orange-color: #ff8f67;
+$purple-color: #7131ff;
+$yellow-color: #fdcb47;
+
+// Fonts...
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+.left-panel {
+  box-shadow: 0px 0px 8px $grey-color;
+  //   background-color: $white-color;
+  background-color: lighten($color: white, $amount: 100);
+  flex: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 3rem 0;
+  align-items: center;
+  position: relative;
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+    .row-1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      li {
+        padding: 2rem 2.5rem;
+        position: relative;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: darken($grey-color, 20);
+      }
+      li:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 4px;
+        background-color: $purple-color;
+        height: 0%;
+        transition: 0.2s;
+      }
+      li:hover:before {
+        height: 100%;
+      }
+    }
+    .row-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      li {
+        padding: 2rem 2.5rem;
+        position: relative;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: darken($grey-color, 20);
+      }
+      li:hover i {
+        color: $purple-color;
+      }
+      li:before {
+        content: '';
+        position: absolute;
+        right: -1%;
+        width: 4px;
+        background-color: $purple-color;
+        height: 0%;
+        transition: 0.2s;
+      }
+      li:hover:before {
+        height: 100%;
+      }
+    }
+  }
+  .active {
+    color: $purple-color;
+  }
+  li.active {
+    position: relative;
+    color: $purple-color;
+  }
+  li .active:after {
+    content: '';
+    position: absolute;
+    right: -1%;
+    top: 0;
+    width: 4px;
+    background-color: $purple-color;
+    height: 100%;
+    transition: 0.2s;
+  }
+
+  .profile {
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+}
+
+aside {
+  flex: 5;
+  display: flex;
+  justify-content: space-between;
+  .middle-panel {
+    flex: 4;
+    background-color: $white-color;
+    padding: 3rem;
+    font-family: 'Open Sans';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 4rem;
+      align-items: center;
+      .left-side {
+        display: flex;
+        padding: 0rem 2rem;
+        flex: 2;
+        align-items: center;
+        h1 {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+        i {
+          font-size: 2rem;
+          padding: 0.5rem;
+        }
+      }
+      .right-side {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        .top {
+          display: flex;
+          justify-content: flex-end;
+          padding: 1rem 5rem;
+        }
+        .bottom {
+          display: flex;
+          padding: 0rem 5rem;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row;
+          .row {
+            display: flex;
+            font-family: 'Open Sans';
+            align-items: center;
+            // width: 100%;
+            justify-content: space-between;
+            i {
+              font-size: 1.5rem;
+              padding: 1rem;
+            }
+            p {
+              font-weight: bold;
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+    .middle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 10rem;
+      align-items: center;
+      background-color: rgba(153, 50, 204, 0.137);
+      border-radius: 10px;
+      .icon {
+        background-color: $orange-color;
+        padding: 1.7rem 2rem;
+        border-radius: 20px;
+        color: $white-color;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      .icon:hover {
+        background-color: darken($orange-color, $amount: 5);
+      }
+      .temperature {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $light-color;
+        position: relative;
+        .main-circle {
+          width: 80%;
+          height: 80%;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 20px solid $light-color;
+          border-right-color: $orange-color;
+          border-left-color: $yellow-color;
+          border-top-color: $purple-color;
+          .shadow-circle {
+            width: 50%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 60px solid rgba($purple-color, $alpha: 0.1);
+            border-bottom-color: $white-color;
+            border-radius: 50%;
+            position: relative;
+          }
+          .inner-circle {
+            position: absolute;
+            background-color: $white-color;
+            width: 130%;
+            height: 130%;
+            background-color: $white-color;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 0px 30px rgba($grey-color, $alpha: 0.6);
+            font-size: 2rem;
+          }
+        }
+        .rotate {
+          transform-origin: right;
+          h1:nth-child(1) {
+            transform: rotate(45deg);
+            background-color: royalblue;
+          }
+          h1:nth-child(2) {
+            transform: rotate(90deg);
+            background-color: royalblue;
+          }
+          h1:nth-child(3) {
+            transform: rotate(135deg);
+            background-color: royalblue;
+          }
+        }
+      }
+    }
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 2rem 10rem;
+      h1 {
+        padding: 0 4rem;
+      }
+      .calendar {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding: 0 4rem;
+        .month {
+          width: 40px;
+          height: 100px;
+          margin: 0 1rem;
+          border-radius: 4px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          color: #333333;
+          background-color: #d4d9e4;
+        }
+        .orange {
+          background-color: $orange-color;
+        }
+        .purple {
+          background-color: $purple-color;
+          color: $white-color;
+        }
+        .yellow {
+          background-color: $yellow-color;
+          color: $white-color;
+        }
+      }
+    }
+  }
+
+  .right-panel {
+    background-color: $light-color;
+    font-family: 'Open Sans';
+    flex: 1;
+    padding: 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .shortcuts {
+      display: flex;
+      flex-direction: column;
+      .content {
+        display: flex;
+        flex-direction: column;
+        .row {
+          display: flex;
+          align-items: center;
+          .icon {
+            width: 3rem;
+            height: 3rem;
+            margin: 1rem;
+            color: $white-color;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .text {
+            h1 {
+              font-size: 1.1rem;
+            }
+            p {
+              font-size: 0.9rem;
+              color: darken($grey-color, $amount: 5);
+            }
+          }
+        }
+      }
+    }
+    .devices {
+      display: flex;
+      flex-direction: column;
+      .contents {
+        display: flex;
+        .icon {
+          width: 3rem;
+          height: 3rem;
+          margin: 1rem;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .add {
+          border: 2px dashed $grey-color;
+          background-color: $white-color;
+          color: #333;
+        }
+      }
+    }
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.text {
+  &-dark {
+    color: #333333;
+  }
+  &-grey {
+    color: $grey-color;
+  }
+  &-purple {
+    color: $purple-color;
+  }
+  &-yellow {
+    color: darken($yellow-color, $amount: 10);
+  }
+}
+.orange {
+  background-color: $orange-color;
+}
+.purple {
+  background-color: $purple-color;
+  color: $white-color;
+}
+.yellow {
+  background-color: $yellow-color;
+  color: $white-color;
+}
