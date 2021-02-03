@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e4e4e9;
+}
+
+.progress-bar {
+  width: 400px;
+  height: 1em;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1.5rem;
+  color: #333;
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.progress-bar::before {
+  content: '';
+  display: flex;
+  align-items: center;
+  position: absolute;
+  min-width: 2.5rem;
+  max-width: 100%;
+  background: #41b883;
+  border-radius: 2.5em;
+  padding: 0.5rem;
+  animation: progress-bar 3s ease-in-out 1 alternate forwards;
+}
+
+@keyframes progress-bar {
+  0% {
+    width: 0%;
+  }
+  55% {
+    width: 25%;
+  }
+  100% {
+    width: 100%;
+  }
+}
